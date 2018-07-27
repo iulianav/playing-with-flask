@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {%if current_user %}
+        <h1>Hi, {{ current_user.username }}!</h1>
+    {% endif %}
+    {% for result in results %}
+    <div><p>{{ result.author.username }} says: <b>{{ result.title }}</b></p></div>
+    {% endfor %}
+{% endblock %}
